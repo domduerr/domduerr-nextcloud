@@ -29,12 +29,12 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 #        if: steps.baseupdatecheck.outputs.needs-updating == 'true'
 
-      - name: Docker Image Update Checker
-        id: baseupdatecheck
-        uses: lucacome/docker-image-update-checker@v1.1.0
-        with:
-          base-image: nextcloud:fpm
-          image: domduerr/domduerr-nextcloud:latest
+#      - name: Docker Image Update Checker
+#        id: baseupdatecheck
+#        uses: lucacome/docker-image-update-checker@v1.1.0
+#        with:
+#          base-image: nextcloud:fpm
+#          image: domduerr/domduerr-nextcloud:latest
 
       - name: Build and push Docker image
         uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
@@ -43,4 +43,4 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: domduerr/domduerr-nextcloud
-        if: steps.baseupdatecheck.outputs.needs-updating == 'true'
+#        if: steps.baseupdatecheck.outputs.needs-updating == 'true'
