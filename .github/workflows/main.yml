@@ -27,7 +27,7 @@ jobs:
         uses: lucacome/docker-image-update-checker@v1
         with:
           base-image: nextcloud:fpm
-          image: domduerr/domduerr-nextcloud
+          image: domduerr/domduerr-nextcloud:latest
       
       - name: Log in to Docker Hub
         uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
