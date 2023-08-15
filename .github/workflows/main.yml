@@ -26,7 +26,7 @@ jobs:
         id: baseupdatecheck
         uses: lucacome/docker-image-update-checker@v1.1.0
         with:
-          base-image: nextcloud:fpm
+          base-image: _/nextcloud:fpm
           image: domduerr/domduerr-nextcloud
       
       - name: Log in to Docker Hub
