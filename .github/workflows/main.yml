@@ -24,7 +24,7 @@ jobs:
 
       - name: Docker Image Update Checker
         id: baseupdatecheck
-        uses: lucacome/docker-image-update-checker@v1
+        uses: lucacome/docker-image-update-checker@v1.1.0
         with:
           base-image: nextcloud:fpm
           image: domduerr/domduerr-nextcloud:latest
